@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f5f5f5;
+  color: #333;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 4px 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul#iphoneList li {
+  padding: 6px;
+  margin: 4px 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+ul#iphoneList li:hover {
+  background-color: #f0f0f0;
+}
+
+#iphoneDetails {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
