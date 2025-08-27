@@ -8,10 +8,34 @@
 </head>
 <body>
   <h1>iPhones</h1>
+  <input type="text" id="searchInput" placeholder="Search iPhones by name or ID...">
+  <button id="addIphoneButton">Add iPhone</button>
   <ul id="iphoneList">
     <!-- iPhones will be loaded here -->
   </ul>
+  <!-- Modal for adding new iPhone -->
+<div id="addIphoneModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Add New iPhone</h2>
+    <table>
+      <tr>
+        <td>Model:</td>
+        <td><input type="text" id="newIphoneModel" placeholder="iPhone Model"></td>
+      </tr>
+      <tr>
+        <td>Release Year:</td>
+        <td><input type="number" id="newIphoneYear" placeholder="Release Year"></td>
+      </tr>
+    </table>
+    <button id="confirmAddIphone">Add iPhone</button>
+  </div>
+</div>
 
   <script src="master.js"></script>
 </body>
 </html>
+
+
+
+

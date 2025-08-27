@@ -8,7 +8,9 @@
 </head>
 <body>
     <button id="backButton">Back to iphones</button>
+    <button id="deleteButton">Delete iphone</button>
   <h1>iPhone Details</h1>
+  <button id="editButton">Edit</button>
   <div id="iphoneDetails">
     Loading...
   </div>
@@ -17,6 +19,27 @@
 <div id="componentDetails"></div>
 </ul>
    <button id="showComponentsButton">Show Components</button>
+   <button id="editButton">Edit iPhone</button>
+
+<!-- Edit iPhone Modal -->
+<div id="editIphoneModal" class="modal">
+  <div class="modal-content">
+    <span class="close-edit">&times;</span>
+    <h2>Edit iPhone</h2>
+    <table>
+      <tr>
+        <td>Model:</td>
+        <td><input type="text" id="editIphoneModel" placeholder="iPhone Model"></td>
+      </tr>
+      <tr>
+        <td>Release Year:</td>
+        <td><input type="number" id="editIphoneYear" placeholder="Release Year"></td>
+      </tr>
+    </table>
+    <button id="confirmEditIphone">Save Changes</button>
+  </div>
+</div>
+
   <script src="details.js"></script>
 </body>
 </html>
