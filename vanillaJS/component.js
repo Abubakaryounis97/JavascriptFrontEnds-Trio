@@ -83,7 +83,8 @@ editButton.addEventListener("click", () => {
     body: JSON.stringify({
       name: newName,
       type: newType,
-      specs: newSpecs
+      specs: newSpecs,
+      iphone: { id: iphoneId }
     })
   })
   .then(res => {
