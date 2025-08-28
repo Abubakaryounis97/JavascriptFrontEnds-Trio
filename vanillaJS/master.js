@@ -79,7 +79,8 @@ confirmButton.addEventListener("click", async () => {
     const res = await fetch(`${API_BASE}/iphones`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ model, releaseYear: parseInt(year) })
+      body: JSON.stringify({ model, 
+        releaseYear: parseInt(year) })
     });
 
     if (!res.ok) throw new Error("Failed to add iPhone");

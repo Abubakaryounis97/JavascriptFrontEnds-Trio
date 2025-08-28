@@ -139,3 +139,40 @@ confirmEdit.addEventListener("click", async () => {
 window.addEventListener("click", (e) => {
   if (e.target === editModal) editModal.style.display = "none";
 });
+
+// add components button
+document.getElementById("addComponentButton").addEventListener("click", () => {
+    if (!iphoneId) return alert("No iPhone ID specified.");
+
+    const type = prompt("Enter component type (e.g., Screen, Battery):");
+const name = prompt("Enter Name:");
+const specs = prompt("Enter Specifications:");
+
+if (!type || !name || !specs) {
+    return alert("All fields are required.");
+}
+
+fetch(`${API_BASE}/components`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ 
+        type, 
+        name,       // matches DB
+        specs,      // matches DB
+         iphone: { id: parseInt(iphoneId) } // matches backend field
+    })
+})
+.then(res => {
+    if (!res.ok) throw new Error("Failed to add component");
+    return res.json();
+})
+.then(newComponent => {
+    alert(`Component added: ID ${newComponent.id}, Type: ${newComponent.type}`);
+    document.getElementById("showComponentsButton").click(); // refresh list
+})
+.catch(err => {
+    console.error("Error adding component:", err);
+    alert("Error adding component. Check console.");
+});
+
+});

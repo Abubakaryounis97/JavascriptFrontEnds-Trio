@@ -19,7 +19,7 @@
 <div id="componentDetails"></div>
 </ul>
    <button id="showComponentsButton">Show Components</button>
-   <button id="editButton">Edit iPhone</button>
+   <button id="addComponentButton">Add Components</button>
 
 <!-- Edit iPhone Modal -->
 <div id="editIphoneModal" class="modal">
@@ -43,3 +43,20 @@
   <script src="details.js"></script>
 </body>
 </html>
+
+<!-- Component Modal -->
+<div id="componentModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModalButton" class="close">&times;</span>
+    <h2>Add New Component</h2>
+    <form id="componentForm">
+      <label for="componentType">Type:</label>
+      <input type="text" id="componentType" required />
+
+      <label for="componentDescription">Description:</label>
+      <textarea id="componentDescription" required></textarea>
+
+      <button type="submit">Save Component</button>
+    </form>
+  </div>
+</div>
